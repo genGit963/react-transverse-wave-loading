@@ -8,12 +8,6 @@
 
 - It generates transverse wave loading effect
 
-      /\ /\                  /\ /\ 
-   /\      /\             /\      /\
- /\          /\         /\          /\
-              /\     /\             /\     
-               /\ /\                 /\ 
-
 
 ### Install
 
