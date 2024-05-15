@@ -15,7 +15,7 @@
 
 ### Quickstart
 
-- First add these css classes in root folders' index.css file
+- First add these css classes in root or src folders' index.css file
 - Tailwindcss must be installed to use this package.
 
 ```css
@@ -81,8 +81,8 @@
 }
 ```
 
-- 
-- 
+-
+-
 - Use case
 
 ```jsx
@@ -92,7 +92,7 @@ function App() {
   return (
     <>
       <HeroButton className="" variant="default" size="lg">
-        HeroButton{" "}
+        HeroButton
       </HeroButton>
     </>
   );
