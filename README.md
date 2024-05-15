@@ -1,83 +1,169 @@
 <div align="center">
         <h1>
-        vite-react-hero-button
+       react-longitudnal-wave-loading
         </h1>
 </div>
 
 ### Features
 
-- You can build button of variant: "default" | "destructive" | "link" | "outline" | "subtle" | "ghost"
-- Button can be of size: "default" | "sm" | "xs" | "lg";
+- It generates " ||| | | ||| | | ||| | | ||| " longitudnal wave loading effect
 
 ### Install
 
-    npm install vite-react-hero-button
+    npm install react-longitudnal-wave-loading
 
 ### Quickstart
 
+- NOTE: I working on to attach css file into, tried many ways still not expected result.
+
 - First add these css classes in root or src folders' index.css file
-- Tailwindcss must be installed to use this package.
+- I had dependencies Tailwindcss but it is not required for this package, you can install without tailwindcss.
 
 ```css
-.hero_btn {
-  @apply active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none;
+.dots {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
 }
 
-.hero_btn:hover {
-  animation: hero_btn_anime 500ms alternate forwards;
+.dots .dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  align-content: center;
+  text-align: center;
+  font-size: large;
+  background-color: green;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 1px 10px 20px #808080b8;
+  animation: wave 1s infinite alternate;
 }
 
-@keyframes hero_btn_anime {
+@keyframes wave {
   0% {
-    transform: translateY(0px);
+    transform: translate(40px);
   }
-  100% {
-    transform: translateY(-5px);
+
+  to {
+    transform: translate(-40px);
   }
 }
 
-/* hero btn variants */
-
-.hero_btn_default {
-  @apply bg-[#003280] text-zinc-100 hover:bg-zinc-800;
+.dots .dot:nth-child(1) {
+  animation-delay: 80ms;
 }
 
-.hero_btn_destructive {
-  @apply text-white hover:bg-red-600 dark:hover:bg-red-600;
+.dots .dot:nth-child(2) {
+  animation-delay: 0.16s;
 }
 
-.hero_btn_outline {
-  @apply bg-zinc-100 text-zinc-900 hover:bg-zinc-200 outline outline-1 outline-zinc-300;
+.dots .dot:nth-child(3) {
+  animation-delay: 0.24s;
 }
 
-.hero_btn_subtle {
-  @apply hover:bg-zinc-200 bg-zinc-100 text-zinc-900;
+.dots .dot:nth-child(4) {
+  animation-delay: 0.32s;
 }
 
-.hero_btn_ghost {
-  @apply bg-transparent hover:bg-zinc-100 text-zinc-800 data-[state=open]:bg-transparent data-[state=open]:bg-transparent;
+.dots .dot:nth-child(5) {
+  animation-delay: 0.4s;
 }
 
-.hero_btn_link {
-  @apply bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-slate-900 dark:text-slate-100 hover:bg-transparent dark:hover:bg-transparent;
+.dots .dot:nth-child(6) {
+  animation-delay: 0.48s;
 }
 
-/* size */
-
-.hero_btn_default {
-  @apply h-10 py-2 px-4;
+.dots .dot:nth-child(7) {
+  animation-delay: 0.56s;
 }
 
-.hero_btn_sm {
-  @apply h-9 px-2 rounded-md;
+.dots .dot:nth-child(8) {
+  animation-delay: 0.64s;
 }
 
-.hero_btn_xs {
-  @apply h-8 px-1.5 rounded-md;
+.dots .dot:nth-child(9) {
+  animation-delay: 0.72s;
 }
 
-.hero_btn_lg {
-  @apply h-11 px-8 rounded-md;
+.dots .dot:nth-child(10) {
+  animation-delay: 0.8s;
+}
+
+@media (max-width: 480px) {
+  .dots {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .dots .dot {
+    height: 15px;
+    width: 20px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+    font-size: 12px;
+    background-color: green;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 1px 10px 20px #808080b8;
+    animation: wave_mobile 1s infinite alternate;
+  }
+
+  @keyframes wave_mobile {
+    0% {
+      transform: translate(-20px);
+    }
+
+    to {
+      transform: translate(20px);
+    }
+  }
+
+  .dots .dot:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .dots .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .dots .dot:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .dots .dot:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .dots .dot:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  .dots .dot:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  .dots .dot:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+
+  .dots .dot:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+
+  .dots .dot:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+
+  .dots .dot:nth-child(10) {
+    animation-delay: 1s;
+  }
 }
 ```
 
@@ -86,17 +172,17 @@
 - Use case
 
 ```jsx
-import { HeroButton } from "vite-react-hero-button";
+import { LongitudnalWaveLoading } from "react-longitudnal-wave-loading";
 
 function App() {
   return (
-    <>
-      <HeroButton className="" variant="default" size="lg">
-        HeroButton
-      </HeroButton>
-    </>
+    <div className="App">
+      <LongitudnalWaveLoading />
+    </div>
   );
 }
+
+export default App;
 ```
 
 ### User

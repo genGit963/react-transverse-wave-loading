@@ -1,1 +1,1 @@
-export { HeroButton } from "./src/components/hero_button";
+export { LongitudnalWaveLoading } from "./src/components/longitudnal_loading";

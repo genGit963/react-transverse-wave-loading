@@ -1,11 +1,14 @@
+import { useState } from "react";
 import "./App.css";
-import { HeroButton } from "./components";
+import { LongitudnalWaveLoading } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <h1>Working to create Hero button</h1>
-      <HeroButton className="bg-red-400" variant="default" size="lg">Here Button</HeroButton>
+      <h1 className="font-bold mt-32 text-lg">
+        npm install react-wave-loading
+      </h1>
+      <LongitudnalWaveLoading />
     </div>
   );
 }
