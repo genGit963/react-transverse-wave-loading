@@ -15,7 +15,7 @@
 
 ### Quickstart
 
-- NOTE: I working on to attach css file into, tried many ways still not expected result.
+- NOTE: I m working on to attach css file into, tried many ways still not expected result.
 
 - First add these css classes in root or src folders' index.css file
 - I had dependencies Tailwindcss but it is not required for this package, you can install without tailwindcss.
