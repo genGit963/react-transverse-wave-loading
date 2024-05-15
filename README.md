@@ -81,6 +81,10 @@
 }
 ```
 
+- 
+- 
+- Use case
+
 ```jsx
 import { HeroButton } from "vite-react-hero-button";
 
