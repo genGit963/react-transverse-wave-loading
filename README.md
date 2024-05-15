@@ -1,16 +1,23 @@
 <div align="center">
         <h1>
-       react-longitudnal-wave-loading
+       react-transverse-wave-loading
         </h1>
 </div>
 
 ### Features
 
-- It generates " ||| | | ||| | | ||| | | ||| " longitudnal wave loading effect
+- It generates transverse wave loading effect
+
+-      /\ /\                  /\ /\ 
+-   /\      /\             /\      /\
+- /\          /\         /\          /\
+-              /\     /\             /\     /\
+-                /\ /\                 /\ /\
+
 
 ### Install
 
-    npm install react-longitudnal-wave-loading
+    npm install react-transverse-wave-loading
 
 ### Quickstart
 
@@ -44,11 +51,11 @@
 
 @keyframes wave {
   0% {
-    transform: translate(40px);
+    transform: translateY(40px);
   }
 
   to {
-    transform: translate(-40px);
+    transform: translateY(-40px);
   }
 }
 
@@ -117,11 +124,11 @@
 
   @keyframes wave_mobile {
     0% {
-      transform: translate(-20px);
+      transform: translateY(-20px);
     }
 
     to {
-      transform: translate(20px);
+      transform: translateY(20px);
     }
   }
 
@@ -172,12 +179,12 @@
 - Use case
 
 ```jsx
-import { LongitudnalWaveLoading } from "react-longitudnal-wave-loading";
+import { TransverseWaveLoading } from "react-transverse-wave-loading";
 
 function App() {
   return (
     <div className="App">
-      <LongitudnalWaveLoading />
+      <TransverseWaveLoading />
     </div>
   );
 }

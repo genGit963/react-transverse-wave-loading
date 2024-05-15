@@ -1,1 +1,1 @@
-export { LongitudnalWaveLoading } from "./longitudnal_loading";
+export { TransverseWaveLoading } from "./longitudnal_loading";

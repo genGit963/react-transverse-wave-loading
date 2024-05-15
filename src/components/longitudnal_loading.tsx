@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const LongitudnalWaveLoading: React.FC = () => {
+export const TransverseWaveLoading: React.FC = () => {
   return (
     <div className="dots">
       <div className="dot">L</div>
